@@ -1,0 +1,195 @@
+#bike {
+  width: 400px;
+  height: 250px;
+  position: relative;
+  margin: 20px 0;
+}
+
+/*******bike*******/
+.move {
+  transform: translateX(500px);
+}
+#bike {
+  transition: transform 3s linear;
+}
+
+.spin {
+  transform: rotate(1080deg);
+}
+/** the weel**/
+#backwheel,
+#frontwheel {
+  width: 120px;
+  height: 120px;
+  border: 8px solid black;
+  position: absolute;
+  top: 68px;
+  -webkit-border-radius: 70px;
+  -moz-border-radius: 70px;
+  -o-border-radius: 70px;
+  border-radius: 70px;
+  transition: transform 3s ease-in-out;
+}
+
+/****animation wheels****/
+#backwheel:hover,
+#frontwheel:hover {
+  transform: rotate(360deg);
+  -webkit-transform: rotate(720deg);
+  -moz-transform: rotate(720deg);
+  -ms-transform: rotate(720deg);
+  -o-transform: rotate(720deg);
+}
+/** positioned the backweel**/
+
+#backwheel {
+  left: 35px;
+}
+/** positioned the frontwheel**/
+#frontwheel {
+  left: 278px;
+}
+
+/** center of the wheel**/
+.center {
+  position: absolute;
+  top: 56px;
+  left: 58px;
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 5px;
+}
+/** all div with class spoke**/
+div[class*='spoke'] {
+  height: 1px;
+  background-color: black;
+  width: 62px;
+  position: absolute;
+  top: 60px;
+  -webkit-transform-origin: 100% 50%;
+  -moz-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+}
+/** inside the weels**/
+.spoke2 {
+  transform: rotate(72deg);
+}
+.spoke3 {
+  transform: rotate(144deg);
+}
+
+.spoke4 {
+  transform: rotate(216deg);
+}
+
+.spoke5 {
+  transform: rotate(288deg);
+}
+
+/** setting default bike frame**/
+#bike div[id*='frame'] {
+  height: 10px;
+  background-color: red;
+  position: absolute;
+  z-index: 2;
+  border-radius: 4px;
+}
+
+#frametop {
+  width: 163px;
+  top: 20px;
+  left: 158px;
+}
+
+#framechainstray {
+  top: 131px;
+  left: 104px;
+  width: 85px;
+}
+
+#framefork,
+#frameseattube {
+  top: 75px;
+  left: 270px;
+  width: 123px;
+  -webkit-transform: rotate(75deg);
+  -moz-transform: rotate(75deg);
+  -ms-transform: rotate(75deg);
+  -o-transform: rotate(75deg);
+  transform: rotate(75deg);
+}
+
+#frameseattube {
+  left: 112px;
+}
+
+#frameseatstay {
+  top: 78px;
+  left: 66px;
+  height: 6px !important;
+  width: 130px;
+  transform: rotate(-65deg);
+}
+#framedowntube {
+  width: 170px;
+  top: 78px;
+  left: 165px;
+  transform: rotate(-40deg);
+}
+/***handlebars****/
+
+.handlebars {
+  position: relative;
+  left: 310px;
+}
+
+#post {
+  background-color: silver;
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  top: 10px;
+}
+
+#bar,
+#handle {
+  position: absolute;
+  top: 5px;
+  width: 50px;
+  height: 10px;
+  background-color: silver;
+  border-radius: 20px;
+  transform-origin: 0% 50%;
+  transform: rotate(-20deg);
+}
+
+#handle {
+  background-color: black;
+  width: 25px;
+  height: 12px;
+  transform: rotate(-20deg) translateX(25px);
+}
+/***seats****/
+
+#seat {
+  background-color: black;
+  position: absolute;
+  left: 135px;
+  border-radius: 20px;
+}
+
+#base {
+  width: 30px;
+  height: 25px;
+}
+
+#nose {
+  background-color: black;
+  width: 40px;
+  height: 15px;
+  position: absolute;
+  left: 20px;
+  top: 0;
+  border-bottom-right-radius: 15px;
+}
